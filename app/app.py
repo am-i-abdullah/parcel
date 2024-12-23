@@ -7,7 +7,7 @@ import threading
 app = FastAPI()
 
 # MQTT Broker Configuration
-MQTT_BROKER = "localhost"  # Use "192.168.137.24" if running on a different machine
+MQTT_BROKER = "localhost"  # Use "10.7.233.217" if running on a different machine
 MQTT_PORT = 1883
 MQTT_TOPIC = "esp32/cam_0"
 MQTT_COMMAND_TOPIC = "esp32/cam_commands"
@@ -167,4 +167,4 @@ def send_command(cmd: Command):
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    uvicorn.run(app, host="0.0.0.0", port=8002)
